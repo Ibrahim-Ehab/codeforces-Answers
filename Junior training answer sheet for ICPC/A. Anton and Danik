@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int number_of_games_played,Anton_sum=0,Danik_sum=0;
+	string outcome_of_each_game;
+	cin >> number_of_games_played;
+	cin >> outcome_of_each_game;
+	for (int counter = 0; counter < number_of_games_played; counter++)
+	{
+		if (outcome_of_each_game[counter] == 'A')
+		{
+			Anton_sum++;
+		}
+		else
+		{
+			Danik_sum++;
+		}
+	}
+	if (Anton_sum > Danik_sum)
+	{
+		cout << "Anton";
+	}
+	if(Danik_sum>Anton_sum)
+	{
+		cout << "Danik";
+	}
+	if(Anton_sum==Danik_sum)
+	{
+		cout << "Friendship";
+	}
+
+	return 0;
+}

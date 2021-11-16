@@ -1,0 +1,38 @@
+#include<iostream>
+#include<cmath>
+#include<string>
+using namespace std;
+
+int main()
+{
+	string first_string, second_string;
+	cin >> first_string;
+	cin >> second_string;
+	for (int counter = 0; counter < first_string.size(); counter++)
+	{
+		first_string[counter] = tolower(first_string[counter]);
+		second_string[counter] = tolower(second_string[counter]);
+	}
+	if (first_string == second_string)
+		cout << 0;
+	else
+	{
+		for (int counter2 = 0; counter2 < first_string.size(); counter2++)
+		{
+			if (first_string > second_string)
+			{
+				cout << 1;
+				break;
+			}
+			else if (second_string > first_string)
+			{
+				cout << -1;
+				break;
+			}
+		
+		}
+	}
+
+	return 0;
+}
+

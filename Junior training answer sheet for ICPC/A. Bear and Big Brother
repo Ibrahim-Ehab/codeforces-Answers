@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int weight_of_Limak, weight_of_Bob,number_of_years=0;
+	cin >> weight_of_Limak >> weight_of_Bob;
+	if (weight_of_Limak > weight_of_Bob)
+		number_of_years = 0;
+	else
+	{
+		while (weight_of_Limak <= weight_of_Bob)
+		{
+			weight_of_Limak *= 3;
+			weight_of_Bob *= 2;
+			number_of_years++;
+		}
+	}
+	cout << number_of_years;
+	return 0;
+}

@@ -1,0 +1,30 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	string text;
+	int number_of_upper = 0, number_of_lower = 0;
+	cin >> text;
+	for (int counter = 0; counter < text.size(); counter++)
+	{
+		if (text[counter] == tolower(text[counter]))
+			number_of_lower++;
+		else
+			number_of_upper++;
+	}
+	if (number_of_lower >= number_of_upper)
+	{
+		for (int low = 0; low < text.size(); low++)
+			text[low] = tolower(text[low]);
+		cout << text;
+	}
+	else
+	{
+		for (int upp = 0; upp < text.size(); upp++)
+			text[upp]=toupper(text[upp]);
+		cout << text;
+	}
+	return 0;
+}

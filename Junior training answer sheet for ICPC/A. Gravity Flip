@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+void swap(int* number1, int* number2);
+void bubble_sort(int unsorted_array[], size_t size_of_array);
+int main()
+{
+	size_t input;
+	cin >> input;
+	int* box = new int[input];
+
+	for (int counter = 0; counter < input; counter++)
+	{
+		cin >> box[counter];
+	}
+
+	bubble_sort(box, input);
+	for (int printing_counter = 0; printing_counter < input; printing_counter++)
+	{
+		cout << box[printing_counter] << " ";
+	}
+	delete[] box;
+
+	return 0;
+}
+void swap(int *number1, int *number2)
+{
+	int temporary=*number1;
+	*number1 = *number2;
+	*number2 = temporary;
+}
+
+void bubble_sort(int unsorted_array[], size_t size_of_array)
+{
+	for (int counter1 = 0; counter1 < size_of_array; counter1++)
+	{
+		for (int counter2 = 0; counter2 < size_of_array - counter1 - 1; counter2++)
+		{
+			if (unsorted_array[counter2] > unsorted_array[counter2 + 1])
+			{
+				swap(&unsorted_array[counter2], &unsorted_array[counter2 + 1]);
+			}
+				
+		}
+	}
+}

@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int Matrix[5][5],steps;
+	for (int counter_rows = 0; counter_rows < 5; counter_rows++)
+	{
+		for (int counter_columns = 0; counter_columns < 5; counter_columns++)
+		{
+			cin >> Matrix[counter_rows][counter_columns];
+			if (Matrix[counter_rows][counter_columns] == 1)
+			{
+				steps = abs(counter_rows - 2) + abs(counter_columns - 2);
+			}
+		}
+	}
+	cout << steps;
+
+	return 0;
+}

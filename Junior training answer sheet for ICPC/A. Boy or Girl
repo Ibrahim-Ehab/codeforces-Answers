@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+	string user_name;
+	int number_of_dist_chars = 0,flag=1;
+	cin >> user_name;
+	for (int counter = 0; counter < user_name.size(); counter++)
+	{
+		for (int counter2 = counter + 1; counter2 < user_name.size(); counter2++)
+		{
+			if (user_name[counter] == user_name[counter2])
+			{
+				flag=0;
+				break;
+			}
+		}
+		if (flag)
+			number_of_dist_chars++;
+		flag = 1;
+	}
+	if (number_of_dist_chars % 2 == 0)
+		cout << "CHAT WITH HER!";
+	else
+		cout << "IGNORE HIM!";
+	return 0;
+}

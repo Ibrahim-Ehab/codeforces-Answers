@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int number_of_solved_problems=0,number_of_problems, Petya_statement_problem, Vasya_statement_problem, Tonya_statement_problem;
+	cin >> number_of_problems;
+	for (int counter = 0; counter < number_of_problems; counter++)
+	{
+		cin >> Petya_statement_problem >> Vasya_statement_problem >> Tonya_statement_problem;
+		if (Petya_statement_problem + Vasya_statement_problem + Tonya_statement_problem >= 2)
+			number_of_solved_problems++;
+	}
+	cout << number_of_solved_problems;
+	return 0;
+}

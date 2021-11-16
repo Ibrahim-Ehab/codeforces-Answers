@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int number_of_friends, height_of_the_fence,height_of_persons,sum_of_heights=0;
+	cin >> number_of_friends>>height_of_the_fence;
+	for (int counter = 0; counter < number_of_friends; counter++)
+	{
+		cin >> height_of_persons;
+		if (height_of_persons > height_of_the_fence)
+			sum_of_heights++;
+		sum_of_heights++;
+	}
+	cout << sum_of_heights;
+	return 0;
+}
