@@ -1,0 +1,37 @@
+#include <iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	size_t number_of_cards;
+	cin >> number_of_cards;
+	int  left = 0, right = number_of_cards - 1,counter=0;
+	long long Sereja_sum = 0, Dima_sum = 0;
+	int* cards = new int[number_of_cards];
+	for (int c = 0; c < number_of_cards; c++)
+		cin >> cards[c];
+	
+	while (left <= right)
+	{
+		if (counter % 2 == 0)
+		{
+			if (cards[left] >= cards[right])
+				Sereja_sum += cards[left++];
+			else
+				Sereja_sum += cards[right--];
+		}
+		else
+		{
+			if (cards[left] >= cards[right])
+				Dima_sum += cards[left++];
+			else
+				Dima_sum += cards[right--];
+		}
+		counter++;
+	}
+	cout << Sereja_sum << " " << Dima_sum;
+	return 0;
+}
+

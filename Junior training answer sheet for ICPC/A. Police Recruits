@@ -1,0 +1,31 @@
+#include <iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int number_of_events;
+	cin >> number_of_events;
+	int treated_crimes = 0;
+	int untreated_crims = 0;
+	for (int i = 0; i < number_of_events; i++) {
+		int event;
+		cin >> event;
+		if (event > 0) {
+			treated_crimes += event;
+
+		}
+		else {
+			if (treated_crimes < 1) {
+				++untreated_crims;
+			}
+			else {
+				--treated_crimes;
+			}
+		}
+	}
+	cout << untreated_crims;
+	return 0;
+}
+
